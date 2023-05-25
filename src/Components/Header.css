@@ -1,0 +1,130 @@
+.header{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+    flex-direction: row;
+}
+
+.header a:link { text-decoration: none; }
+
+
+.header a:visited { text-decoration: none; }
+
+
+.header a:active { text-decoration: none; }
+
+.logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: whitesmoke;
+}
+
+.navlist{
+    display: flex;
+    list-style: none;
+}
+
+.navlist a{
+    color: white;
+    margin-left: 60px;
+    font-size: 17px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+}
+
+.navlist a:hover{
+    border-bottom: 2px solid white;
+}
+
+#menu-icon{
+    color: white;
+    filter: brightness(0) invert(1);
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width: 1535px){
+    header{
+        padding: 15px 3%;
+        transition: .2s;
+    }
+  }
+  @media(max-width: 1460px){
+    section{
+        padding: 0 12%;
+        transition: .2s;
+    }
+  }
+  @media(max-width: 1340px){
+    .camara{
+        width: 100%;
+        height:auto;
+    }
+    .hero-text h1{
+        font-size: 75px;
+        margin: 0 0 30px;
+    }
+  }
+  @media(max-width: 1195px){
+    section{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .hero-text{
+        padding-top: 115px;
+    }
+    .hero-text{
+        text-align: center;
+    }
+    .camara{
+        vertical-align: middle;
+        width: 560px;
+        height: auto;
+    }
+    .hero{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+  }
+@media(max-width: 990px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 40vh;
+        background: #1E1E1E;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+    }
+    .navlist a{
+        display: block;
+        margin: 10px 0;
+        margin-left: 0;
+    }
+    .navlist.open{
+        right: 0;
+    }
+}
+@media(max-width: 680px){
+    .hero-img img{
+        width: 50%;
+        height: auto;
+    }
+}
